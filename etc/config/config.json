@@ -1,0 +1,39 @@
+{
+    "broker": {
+        "host": "10.10.2.211",
+        "port": 30000,
+
+        "username": "guest",
+        "password": "guest",
+
+        "topic": {
+            "subscribe": "CameraGateway.4.Frame"
+        }
+    },
+
+    "model": {
+        "path": "models/yolov8m-seg.pt",
+        "confidence": 0.5,
+        "classes": [73, 66, 63, 65]
+    },
+
+    "detection":{
+        
+        "colors": {
+            "63": [0, 0, 255],
+            "65": [255, 255, 0],
+            "66": [0, 255, 0],
+            "73": [255, 0, 0]
+            
+            
+        },
+
+        "label": {
+            "63": "laptop",
+            "65": "remote",
+            "66": "keyboard",
+            "73": "book"
+        }
+
+    }
+}
